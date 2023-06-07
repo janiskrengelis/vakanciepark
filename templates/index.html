@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+        <title>Fonteynvakantiepark home page!</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+                <div class="header__inner">
+                        <div class="header__logo"><a class="nav__link" href="{{ url_for('main_page')}}">Fonteynvakantiepark</a></div>
+                {% if current_user.is_authenticated %}
+                <nav class="nav">
+                        <a class="nav__link" href="{{ url_for('reservation')}}">Reservation</a>
+                        <a class="nav__link" href="{{ url_for('logout')}}">Logout</a>
+                        {% if current_user.admin %}
+                                <a class="nav__link" href="{{ url_for('admin.index')}}">Admin</a>
+                        {% endif %}
+                </nav>
+                {% else %}
+                <nav class="nav">
+                        <a class="nav__link" href="{{ url_for('login_page')}}">Login</a>
+                </nav>
+                {% endif %}
+                </div>
+        </div>
+    </header>
+
+    <div class="intro">
+        <div class="container">
+                <div class="intro__inner">
+                        <h1 class="intro__title">Welcome to Fonteynvakantiepark!</h1> 
+                </div> 
+        </div>
+        <div class="arrow-8">
+        </div>
+    </div>
+        <div class="under__intro">
+                <div class="grid">
+                        <div class="screenshot">
+                        </div>
+                        <div class="text">
+                                <h2>Fonteyn Vakantieparken</h2>
+                                <p>Fonteyn Holiday Parks is a traditional Dutch family business. 50 years ago, Frits Fonteyn started a small campsite in the south of the country. Over the years, he and his brothers have built small holiday homes on his land. Over the last 20 years, the family has bought several pieces of land and built small holiday parks on them. Ten years ago they also set up a number of parks in Belgium and Germany and started to take over existing parks.
+                                        Day-to-day management is now in the hands of his son and daughter.</p>
+                                <h2>Organisation</h2>
+                                <p>Fonteyn Holiday Parks has now grown into an international organization with a number of departments. In total, the group has 100 salaried employees, but more than 300 people work for the organization during the high season. This varies from cleaning, recreation, and restaurant staff to positions that are not considered strategic, such as lawyers and IT staff. These are hired or they work together with business partners who perform these services.
+                                </p>
+                        </div>
+                </div>
+                <div class="under_text">
+                        <h2>Innovation and sustainability</h2>
+                        <p>The Fonteyn family is very aware of the social function of their company. They want to improve their services and make their company more sustainable through innovations.
+
+                                They would like an app in which the carbon footprint of the visitors can be tracked. To collect the data for this, use must be made of various sensors can be found in and around the holiday home or have yet to be placed.
+                                
+                                In addition, visitors also want to offer visitors the opportunity to make reservations for, for example, the restaurant, bowling alleys, bicycles, and other recreational facilities that the parks have at their disposal. They should be able to make these bookings at home via an app, but also during their stay. In addition, reservations can also be made for recreational resources at the other parks during their stay.
+                                
+                                They also want to use all collected data to further optimize business processes and to further innovate the services now and in the future.
+                        </p>
+                </div>
+        </div>
+        <header class="header_login_2">
+                <h3>Contact us:</h3> <h4>Email: adminfonteynpark@gmail.com  Phone: +31635622373</h4>
+        </header>
+</body>

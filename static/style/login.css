@@ -1,0 +1,36 @@
+body{
+	margin: 0;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 10px;
+	line-height: 1.6;
+}
+
+.container{
+	width: 100%;
+	max-width: 961px;
+	margin: 0 auto;
+	text-shadow: 1.5px 1.5px 1.5px #000
+}
+
+/* HEADER */
+
+.header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header__inner{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo{
+	font-size: 45px;
+	font-weight: 700;
+	color: #800053;
+}

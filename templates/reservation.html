@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+        <title>Fonteynvakantiepark Reservation</title>
+</head>
+<body>
+    <header class="header_login">
+        <div class="container">
+                <div class="header__inner">
+                        <div class="header__logo"><a class="nav__link" href="{{ url_for('main_page')}}">Fonteynvakantiepark</a></div>
+                <nav class="nav">
+                        <a class="nav__link" href="{{ url_for('main_page')}}">Go back</a>
+                </nav>
+                </div>
+        </div>
+    </header>
+    <div class="container_reg">
+    <h1>Reservation</h1>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        {{ form.start }} <br>
+        {{ form.end }} <br>
+        {{ form.place }} <br>
+        {{ form.accommodation }} <br>
+        {{ form.notes }} <br>
+        {{ form.submit }}
+    </form>
+    </div>
+</body>
+
+</html>
